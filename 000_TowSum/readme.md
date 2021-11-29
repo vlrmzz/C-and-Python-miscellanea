@@ -23,3 +23,12 @@ Only one valid answer exists.
  
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+### Notes
+Unordered map is an associative container that contains key-value pairs with unique keys. 
+Search, insertion, and removal of elements have average constant-time complexity.
+Internally, the elements are not sorted in any particular order, but organized into buckets.
+Which bucket an element is placed into depends entirely on the hash of its key. 
+Keys with the same hash code appear in the same bucket. 
+This allows fast access to individual elements, since once the hash is computed, 
+it refers to the exact bucket the element is placed into.
