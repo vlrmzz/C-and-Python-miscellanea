@@ -4,14 +4,6 @@ using std::vector;
 using std::unordered_map;
 #include<iostream>
 
-template<typename K, typename V>
-void print_map(std::unordered_map<K, V> const &m)
-{
-    for (auto const &pair: m) {
-        std::cout << "{" << pair.first << ": " << pair.second << "}\n";
-    }
-}
-
 class Solution {
     public:
         vector<int> twoSum(vector<int>& nums, int target) {
@@ -21,7 +13,6 @@ class Solution {
                 if (found != record.end())
                     return {found->second, i};
                 record.emplace(target - nums[i],i);
-                print_map(record);
             }
             return {-1,-1};
         }
